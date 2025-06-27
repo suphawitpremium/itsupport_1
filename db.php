@@ -1,12 +1,12 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = "";
-$database = "it_support";
+$pass = "";
+$dbname = "it_support";
 
-$conn = new mysqli($host, $user, $password, $database);
-
+$conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
-    die("เชื่อมต่อฐานข้อมูลล้มเหลว: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
+mysqli_set_charset($conn, "utf8");
 ?>

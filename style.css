@@ -1,0 +1,112 @@
+/* ===== ชื่อเว็บไซต์ด้านบน (ปรับสมดุล) ===== */
+.site-title {
+  text-align: center;
+  font-size: 18px; /* ขนาดพอดี */
+  font-weight: 600; /* หนาพอให้เด่น */
+  padding: 12px 0;  /* ลดพื้นที่ว่าง */
+  background-color: #111;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  font-family: 'Segoe UI', 'Prompt', sans-serif;
+  border-bottom: 1px solid #1c1c1c; /* บางลงให้เนียน */
+}
+
+
+
+/* ===== ฟอนต์ & พื้นหลังรวม ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #ffffff;
+}
+
+/* ===== Layout แบ่งซ้ายขวา ===== */
+.main-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== Sidebar (กล่องหัวข้อซ้าย) ===== */
+.sidebar {
+  width: 300px;
+  background-color: #111;
+  padding: 30px 20px;
+  overflow-y: auto;
+  border-right: none; /* ✅ ลบเส้นคั่น */
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ===== กล่องหัวข้อแบบเรียบ ===== */
+.step-box {
+  background: #1d1d1d;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: none;
+  box-shadow: none;
+}
+
+/* ===== ปุ่มหัวข้อ ===== */
+.option {
+  padding: 12px 15px;
+  background: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  margin-top: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: #fff;
+}
+
+.option:hover {
+  background: #444;
+}
+
+.selected {
+  background: #5e5eff !important;
+  color: #fff !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ===== พื้นที่ด้านขวา ===== */
+.flow-container {
+  flex-grow: 1;
+  display: flex;
+  gap: 24px;
+  padding: 40px;
+  overflow-x: auto;
+  align-items: flex-start;
+  background-color: #111;
+  /* ✅ ไม่มีเส้นคั่นหรือแสงเงาระหว่างส่วนซ้าย */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .flow-container {
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: visible;
+  }
+}

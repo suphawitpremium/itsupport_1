@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2025 at 11:07 AM
+-- Generation Time: Jun 27, 2025 at 03:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -40,7 +40,8 @@ CREATE TABLE `cause_it` (
 --
 
 INSERT INTO `cause_it` (`id`, `title`, `text`, `photo`, `title_id`) VALUES
-(1, 'ืnetwork สายหลุด', '', '', 1);
+(1, 'สายหลุด', '', '', 1),
+(2, 'asdsad', 'asdsad', '', 2);
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,7 @@ CREATE TABLE `solution` (
 --
 
 INSERT INTO `solution` (`id`, `title`, `text`, `photo`, `rs_id`) VALUES
-(1, 'ทำใจต่อใหม่ บายเบล', '', '', 1);
+(1, 'ตรวจสอบว่าสาย LAN เสียบแน่นทั้งสองฝั่งหรือไม่ (คอมพิวเตอร์ & Switch/Router)', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -80,10 +81,9 @@ CREATE TABLE `title_it` (
 --
 
 INSERT INTO `title_it` (`id`, `title`, `icon`) VALUES
-(1, 'NETWORK', ''),
-(2, 'SAP', ''),
-(3, 'CIMCO', ''),
-(4, 'printer', '');
+(1, 'Network', ''),
+(2, 'asdsadsda', ''),
+(3, 'asdsasdasdas', '');
 
 --
 -- Indexes for dumped tables
@@ -115,7 +115,7 @@ ALTER TABLE `title_it`
 -- AUTO_INCREMENT for table `cause_it`
 --
 ALTER TABLE `cause_it`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `solution`
@@ -127,7 +127,7 @@ ALTER TABLE `solution`
 -- AUTO_INCREMENT for table `title_it`
 --
 ALTER TABLE `title_it`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
